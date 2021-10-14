@@ -873,6 +873,11 @@ static int runCommand(const char *command, ...) {
  * @return a fully qualified path to the temporary directory
  */
 static char *makeTempDir() {
+#ifdef HAVE_MKDTEMP
+  char dir[] = "dirXXXXXX";
+  mkdtemp(dir);
+  if (dir == NULL) return dir;
+#else
   char dir[L_tmpnam];
   int i;
   for (i = 0; i < 5; i++) {
@@ -883,6 +888,7 @@ static char *makeTempDir() {
     }
   }
   if (i == 5) return NULL;
+#endif /* HAVE_MKDTEMP */
   return strdup(dir);
 }
 

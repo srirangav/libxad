@@ -87,7 +87,7 @@ AC_CHECK_LIB(c, dlopen, [LIB_DL=""],
 AC_SYS_LARGEFILE
 AC_FUNC_ALLOCA
 AC_FUNC_FSEEKO
-AC_CHECK_FUNCS([memcpy strcasecmp strchr utime utimes])
+AC_CHECK_FUNCS([memcpy strcasecmp strchr utime utimes mkdtemp])
 AC_CHECK_FUNCS([getopt_long],,[AC_CHECK_LIB([gnugetopt], [getopt_long],
   [AC_DEFINE([HAVE_GETOPT_LONG])],[AC_LIBOBJ(getopt) AC_LIBOBJ(getopt1)])])
 
