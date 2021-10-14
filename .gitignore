@@ -21,3 +21,33 @@ DerivedData
 # cvs
 CVS
 .cvsignore
+*~
+# build output
+*.lo
+*.o
+.deps
+.dirstamp
+.libs
+Makefile.in
+aclocal.m4
+autom4te.cache
+checkx
+compile
+config.guess
+config.h
+config.h.in
+config.log
+config.status
+config.sub
+configure
+depcomp
+functions.h
+xadmaster.h
+install-sh
+libtool
+libxad.la
+libxad.spec
+ltmain.sh
+missing
+stamp-h1
+m4
