@@ -897,7 +897,6 @@ static int deleteDir(const char *dir) {
   DIR *dirPtr;
   char *file = NULL;
   struct stat st;
-  int ok = 1;
 
   if (!(dirPtr = opendir(dir))) return 0; 
 
@@ -919,6 +918,6 @@ static int deleteDir(const char *dir) {
 
 failure:
   free(file);
-  closedir(dir);
+  closedir(dirPtr);
   return 0;
 }
