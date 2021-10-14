@@ -95,6 +95,9 @@ CLIENTDIR=`eval eval eval eval echo "${libdir}/xad/clients"`
 AC_DEFINE_UNQUOTED(CLIENTDIR, "$CLIENTDIR", [Path to XAD clients])
 
 
-AC_SUBST([TAGMODE CLIENTDIR LIB_DL])
+AC_SUBST([TAGMODE])
+AC_SUBST([CLIENTDIR])
+AC_SUBST([LIB_DL])
 AC_CONFIG_FILES([Makefile include/Makefile clients/Makefile libxad.spec])
 AC_OUTPUT
+

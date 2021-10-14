@@ -1,4 +1,4 @@
-AUTOMAKE_OPTIONS = 	foreign
+AUTOMAKE_OPTIONS = 	foreign subdir-objects
 if DEBUG
 extra_warnings =	-Wconversion -Wsign-compare
 endif
