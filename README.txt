@@ -9,8 +9,7 @@ Origin:
     This version is based on the most recent version of libxad
     available from:
 
-    $ cvs -z3 -d:pserver:anonymous@a.cvs.sourceforge.net:/cvsroot/libxad \
-      co -P libxad
+    $ cvs -z3 -d:pserver:anonymous@a.cvs.sourceforge.net:/cvsroot/libxad co -P libxad
 
 Build:
 
