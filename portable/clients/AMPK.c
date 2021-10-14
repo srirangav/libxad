@@ -2485,7 +2485,7 @@ XADUNARCHIVE(Arc)
       break;
     case ARCMETHOD_PACKLZW:
       io->xio_PutFunc = xadIOPutFuncRLE90;
-      if(!xadIOGetChar(io) == 12)
+      if(!(xadIOGetChar(io) == 12))
         err = XADERR_DECRUNCH;
       else
         err = xadIO_Compress(io, 12|UCOMPBLOCK_MASK);
@@ -3051,7 +3051,7 @@ XADUNARCHIVE(Warp)
             switch(dat[19])
             {
             case 1:
-              if(!xadIOGetChar(io) == 12)
+              if(!(xadIOGetChar(io) == 12))
                 err = XADERR_DECRUNCH;
               else
                 err = xadIO_Compress(io, 12|UCOMPBLOCK_MASK);

@@ -130,7 +130,7 @@ const xadSTRING *buffer, xadUINT32 len)
         ;
       if(*a) i = PATHSIGN;
       else if(i == PATHSIGN) i = PATHSIGNMAPPER;
-      str->ucstring[str->ucsize++] == i;
+      str->ucstring[str->ucsize++] = i;
       --len;
       str->bufsize -= 2;
     }
@@ -282,7 +282,7 @@ static xadERROR makenormalstring(struct MyString *str, xadUINT32 charset)
       {
         /* handle exception conversion here */
         if(a >= 0x81 && a <= 0xA0) a -= 0x80;
-        else if(a >= 0xC0 || a <= 0xC6) a = 'A';
+        else if(a >= 0xC0 && a <= 0xC6) a = 'A';
         else if(a == 0xC7) a = 'C';
         else if(a >= 0xC8 && a <= 0xCB) a = 'E';
         else if(a >= 0xCC && a <= 0xCF) a = 'I';

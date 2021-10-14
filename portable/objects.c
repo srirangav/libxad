@@ -124,10 +124,10 @@ FUNCxadAllocObject /* xadUINT32 type, xadTAGPTR tags */
           = ENDSTRUCT(xadFileInfo);
         if(nsize)
           ((struct xadFileInfo *) obj)->xfi_FileName
-          = ENDSTRUCT(xadFileInfo) + psize;
+          = (xadSTRPTR)ENDSTRUCT(xadFileInfo) + psize;
         if(csize)
           ((struct xadFileInfo *) obj)->xfi_Comment
-          = ENDSTRUCT(xadFileInfo) + psize + nsize;
+          = (xadSTRPTR)ENDSTRUCT(xadFileInfo) + psize + nsize;
       }
     }
     break;

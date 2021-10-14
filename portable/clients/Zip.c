@@ -483,7 +483,7 @@ XADGETINFO(Zip)
         {
           xadUINT32 i;
 
-          if(zc.NameLength)
+          if(zc.NameLength > 0)
             err = xadHookAccess(XADM XADAC_INPUTSEEK, (xadUINT32) EndGetI16(zc.NameLength), 0, ai);
           o = EndGetI32(zc.LocHeaderOffset);
           if((i = EndGetI16(zc.StartDisk)) && ai->xai_MultiVolume)
