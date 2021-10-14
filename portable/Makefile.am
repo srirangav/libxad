@@ -5,6 +5,8 @@ endif
 AM_CFLAGS =	-std=c99 -Wall -pedantic -DUNIX $(extra_warnings) \
 		-I$(top_srcdir)/include -I$(top_srcdir)/unix -I$(top_srcdir)
 
+ACLOCAL_AMFLAGS = -I m4
+
 SUBDIRS =		include clients
 lib_LTLIBRARIES =	libxad.la
 bin_PROGRAMS =		checkx
